@@ -1,0 +1,14 @@
+{
+  "name": "event-layer",
+  "version": "0.1.0",
+  "description": "Configurable event layer for website analytics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ssarkar@cimpress.com",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.2.2"
+  }
+}
