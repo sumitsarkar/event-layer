@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/adapters/amplitude.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">lib/adapters</a> amplitude.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.56% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">6.67% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/15</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">module.exports = <span class="fstat-no" title="function not covered" >(o</span>ptions) =&gt; {
+  const enabled = <span class="cstat-no" title="statement not covered" >(typeof options.enabled === 'boolean') ? false : options.enabled</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    test: <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >(window.amplitude &amp;&amp; window.amplitude.options) ? true : false,</span>
+    identify: <span class="fstat-no" title="function not covered" >(u</span>serId, userProperties) =&gt; {
+      // Send the identify call to Amplitude's JS library
+      // console.log('Identifying: ', userId, userProperties);
+<span class="cstat-no" title="statement not covered" >      if (window.amplitude &amp;&amp; userId) <span class="cstat-no" title="statement not covered" >amplitude.getInstance().setUserId(userId)</span></span>
+&nbsp;
+      // Set people properties on our identified user
+<span class="cstat-no" title="statement not covered" >      if (window.amplitude &amp;&amp; userProperties) <span class="cstat-no" title="statement not covered" >amplitude.getInstance().setUserProperties(userProperties)</span></span>
+    },
+    track: <span class="fstat-no" title="function not covered" >(e</span>ventName, eventProperties) =&gt; {
+      // Send the tracked event to Amplitude's JS library
+      // console.log('tracking: ', eventName, eventProperties);
+<span class="cstat-no" title="statement not covered" >      if (window.amplitude &amp;&amp; eventName) <span class="cstat-no" title="statement not covered" >amplitude.getInstance().logEvent(eventName, eventProperties)</span></span>
+    },
+    page: <span class="fstat-no" title="function not covered" >(c</span>ategory, name, properties) =&gt; {
+<span class="cstat-no" title="statement not covered" >      if (window.amplitude) {</span>
+<span class="cstat-no" title="statement not covered" >        if (category || name) {</span>
+<span class="cstat-no" title="statement not covered" >          if (category)</span>
+<span class="cstat-no" title="statement not covered" >            amplitude.getInstance().logEvent('pageview_' + category, properties)</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >          if (name)</span>
+<span class="cstat-no" title="statement not covered" >            amplitude.getInstance().logEvent('pageview_' + name, properties)</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          amplitude.getInstance().logEvent('pageview', properties)</span>
+        }
+      }
+    },
+&nbsp;
+    isEnabled: <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >enabled,</span>
+  }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Dec 07 2018 17:57:47 GMT+0100 (CET)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

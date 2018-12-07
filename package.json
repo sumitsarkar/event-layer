@@ -17,5 +17,33 @@
     "jest": "^23.6.0",
     "parcel-bundler": "^1.10.3",
     "standard": "^12.0.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**",
+      "!**/build/**"
+    ],
+    "coverageDirectory": "build/coverage",
+    "coveragePathIgnorePatterns": [
+      "adapters"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 1,
+        "functions": 1,
+        "lines": 1
+      }
+    },
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "adapters"
+    ]
   }
+
 }
