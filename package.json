@@ -2,13 +2,20 @@
   "name": "event-layer",
   "version": "0.1.0",
   "description": "Configurable event layer for website analytics",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel lib/index.js -o dist/event-layer.js --global EventLayer",
+    "build": "parcel build lib/index.js -o dist/event-layer.js --global EventLayer",
+    "format": "standard \"src/**/*.js\"",
+    "test": "jest",
+    "prepare": "npm run build",
+    "preversion": "npm run lint"
   },
   "author": "ssarkar@cimpress.com",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^3.2.2"
+    "jest": "^23.6.0",
+    "parcel-bundler": "^1.10.3",
+    "standard": "^12.0.1"
   }
 }
