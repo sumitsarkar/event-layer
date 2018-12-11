@@ -19,6 +19,13 @@ test('when initialize is called with user provided configuration', () => {
             'userProperties': {},
           }
         },
+        pageTransformer: (category, name, properties) => {
+          return {
+            'category': 'potato',
+            'name': 'namewa',
+            'properties': {}
+          }
+  }
       },
     },
   }
