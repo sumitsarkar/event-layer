@@ -1,5 +1,5 @@
 const initializer = require('../../lib/initialize')
-
+const _ = require('lodash')
 test('when initialize is called with user provided configuration', () => {
   const dummyConfig = {
     'google-analytics': {
@@ -24,9 +24,9 @@ test('when initialize is called with user provided configuration', () => {
   }
 
   const result = initializer(dummyConfig)
-  expect(result.length).toEqual(1)
-  expect(typeof result[0].transformers).toEqual('object')
-  expect(result[0].transformers.eventTransformer()).toEqual({
+  expect(_.keys(result).length).toEqual(1)
+  expect(typeof result['google-analytics'].transformers).toEqual('object')
+  expect(result['google-analytics'].transformers.eventTransformer()).toEqual({
     'eventName': 'goooooo',
     'eventProperties': {
       'khaaaaa': 'goooooo',
