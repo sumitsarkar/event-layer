@@ -4,8 +4,8 @@
   "description": "Configurable event layer for website analytics",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "parcel lib/index.js -o dist/event-layer.js --global EventLayer",
-    "build": "parcel build lib/index.js -o dist/event-layer.js --global EventLayer --detailed-report",
+    "dev": "parcel lib/index.js -o build/dist/event-layer.js --global EventLayer",
+    "build": "parcel build lib/index.js -o build/dist/event-layer.js --global EventLayer --detailed-report",
     "format": "standard \"src/**/*.js\"",
     "test": "jest",
     "prepare": "npm run build",
@@ -35,9 +35,9 @@
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 1,
-        "functions": 1,
-        "lines": 1
+        "branches": 80,
+        "functions": 80,
+        "lines": 80
       }
     },
     "testEnvironment": "node",

@@ -1,4 +1,4 @@
-const initializer = require('../../lib/initialize')
+const Initializer = require('../../lib/initialize')
 const _ = require('lodash')
 test('when initialize is called with user provided configuration', () => {
   const dummyConfig = {
@@ -23,14 +23,14 @@ test('when initialize is called with user provided configuration', () => {
           return {
             'category': 'potato',
             'name': 'namewa',
-            'properties': {}
+            'properties': {},
           }
-  }
+        },
       },
     },
   }
 
-  const result = initializer(dummyConfig)
+  const result = Initializer.initialize(dummyConfig)
   expect(_.keys(result).length).toEqual(1)
   expect(typeof result['google-analytics'].transformers).toEqual('object')
   expect(result['google-analytics'].transformers.eventTransformer()).toEqual({
@@ -65,7 +65,7 @@ test('when initialize is called with unsupported configuration', () => {
   }
 
   try {
-    const result = initializer(dummyConfig)
+    const result = Initializer.initialize(dummyConfig)
     // Hacky fail function. The code shouldn't reach here
     expect(true).toBe(false)
   } catch (e) {
