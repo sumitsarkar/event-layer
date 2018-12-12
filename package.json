@@ -2,7 +2,8 @@
   "name": "event-layer",
   "version": "0.1.0",
   "description": "Configurable event layer for website analytics",
-  "main": "dist/index.js",
+  "main": "build/dist/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "dev": "parcel lib/index.js -d build/dist --out-file event-layer.js --global EventLayer",
     "build": "parcel build lib/index.js -d build/dist --out-file event-layer.js --global EventLayer --detailed-report",
