@@ -1,0 +1,43 @@
+image: docker:latest
+
+variables:
+  DOCKER_DRIVER: overlay2
+
+services:
+  - docker:dind
+
+stages:
+  - install
+  - test
+  - build
+
+# Cache downloaded dependencies and plugins between builds.
+cache:
+  paths:
+    - node_modules/
+
+install:
+  stage: install
+  image: node:8.14.0-alpine
+  script:
+    - npm install
+
+test:
+  stage: test
+  image: node:8.14.0-alpine
+  script:
+    - npm run test
+  coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
+  artifacts:
+    paths:
+      - build
+
+node-build:
+  stage: build
+  image: node:8.11.2-alpine
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - build
+
