@@ -27,7 +27,7 @@ test:
   image: node:8.14.0-alpine
   script:
     - npm run test
-  coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
+  coverage: '/All files[^|]*\|[^|]*[^|]*\|[^|]*\s+([\d\.]+)/'
   artifacts:
     paths:
       - build
