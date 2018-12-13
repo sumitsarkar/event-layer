@@ -1,7 +1,7 @@
 # Event Layer for Analytics
 
 [![Build Status](https://travis-ci.org/sumitsarkar/event-layer.svg?branch=master)](https://travis-ci.org/sumitsarkar/event-layer)
-[![Coverage Status](https://coveralls.io/repos/github/sumitsarkar/event-layer/badge.svg?branch=master)](https://coveralls.io/github/sumitsarkar/event-layer?branch=master)
+[![Coverage Status](https://codecov.io/gh/sumitsarkar/event-layer/branch/master/graph/badge.svg)](https://codecov.io/gh/sumitsarkar/event-layer/branch/master)
 
 ![Setup Instructions](docs/analytics.png)
 
