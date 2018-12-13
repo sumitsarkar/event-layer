@@ -1,6 +1,6 @@
 # Event Layer for Analytics
 
-[![pipeline status](https://cimpress.githost.io/ABC/e-layer/event-layer/badges/master/pipeline.svg)](https://cimpress.githost.io/ABC/e-layer/event-layer/commits/master)
+[![Build Status](https://travis-ci.org/sumitsarkar/event-layer.svg?branch=master)](https://travis-ci.org/sumitsarkar/event-layer)
 [![Coverage Status](https://coveralls.io/repos/github/sumitsarkar/event-layer/badge.svg?branch=master)](https://coveralls.io/github/sumitsarkar/event-layer?branch=master)
 
 ![Setup Instructions](docs/analytics.png)
