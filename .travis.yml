@@ -11,5 +11,6 @@ cache:
 install:
   - npm install
 script:
-  - npm run coveralls
+  - npm run test
+  - npm run report-coverage
   - npm run build

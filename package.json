@@ -11,11 +11,12 @@
     "test": "jest",
     "prepare": "npm run build",
     "preversion": "npm run lint",
-    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "report-coverage": "./node_modules/.bin/codecov"
   },
   "author": "ssarkar@cimpress.com",
   "license": "MIT",
   "devDependencies": {
+    "codecov": "^3.1.0",
     "coveralls": "^3.0.2",
     "jest": "^23.6.0",
     "parcel-bundler": "^1.10.3",
