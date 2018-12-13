@@ -2,6 +2,9 @@
 
 [![Build Status](https://travis-ci.org/sumitsarkar/event-layer.svg?branch=master)](https://travis-ci.org/sumitsarkar/event-layer)
 [![Coverage Status](https://codecov.io/gh/sumitsarkar/event-layer/branch/master/graph/badge.svg)](https://codecov.io/gh/sumitsarkar/event-layer/branch/master)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 
 ![Setup Instructions](docs/analytics.png)
 
