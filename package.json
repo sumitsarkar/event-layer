@@ -10,11 +10,13 @@
     "format": "standard \"src/**/*.js\"",
     "test": "jest",
     "prepare": "npm run build",
-    "preversion": "npm run lint"
+    "preversion": "npm run lint",
+    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "author": "ssarkar@cimpress.com",
   "license": "MIT",
   "devDependencies": {
+    "coveralls": "^3.0.2",
     "jest": "^23.6.0",
     "parcel-bundler": "^1.10.3",
     "standard": "^12.0.1"
@@ -46,5 +48,4 @@
       "adapters"
     ]
   }
-
 }
